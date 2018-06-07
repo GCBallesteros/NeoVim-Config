@@ -35,6 +35,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'qpkorr/vim-bufkill'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
+Plug 'ambv/black'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -45,6 +46,8 @@ set scrolloff=5
 " and point python3_host_prog to your python3
 let g:python3_host_prog='/opt/local/bin/python3.5'
 let g:deoplete#enable_at_startup = 1
+
+let g:deoplete#sources#jedi#server_timeout=30
 
 " Search options
 set incsearch
@@ -73,14 +76,20 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 map <Leader><Leader>w <Plug>(easymotion-w)
 
-" Buffers Install buftabline
 set hidden
-nnoremap <C-N> :bnext<CR>
-nnoremap <C-P> :bprev<CR>
 
 " Syntax Highlighting
 syntax on
 colorscheme onedark
+
+"Trimwhite space easily
+fun! TrimWhiteSpace()
+    let l:save = winsaveview()
+    %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+
+command! TrimWhiteSpace call TrimWhiteSpace()
 
 nnoremap <silent> n n:call HLNext(0.2)<CR>
 nnoremap <silent> N N:call HLNext(0.2)<CR>
