@@ -32,9 +32,12 @@ Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-peekaboo'
 Plug 'qpkorr/vim-bufkill'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
+Plug 'reedes/vim-pencil'
+Plug 'jeetsukumaran/vim-filebeagle'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -71,12 +74,6 @@ nmap s <Plug>(easymotion-s2)
 nmap <Leader>w <Plug>(easymotion-bd-wl)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
-map <Leader><Leader>w <Plug>(easymotion-w)
-
-" Buffers Install buftabline
-set hidden
-nnoremap <C-N> :bnext<CR>
-nnoremap <C-P> :bprev<CR>
 
 " Syntax Highlighting
 syntax on
@@ -97,6 +94,11 @@ function! HLNext (blinktime)
     redraw
 endfunction
 
+" FileBeage Remappings
+" I only use it to access file search fast and create new ones
+let g:filebeagle_suppress_keymaps = 1
+map <silent> -          <Plug>FileBeagleOpenCurrentBufferDir
+
 
 " Startify options
 let g:startify_bookmarks = ['~/.config/nvim/init.vim', '~/Dropbox/Thesis']
@@ -109,4 +111,3 @@ let g:startify_relative_path = 1
 " How to disable wrap per file
 " Edit  $VIMRUNTIME/ftplugin/filetypename.vim
 " In that file write towards the end:setlocal wrap
-
