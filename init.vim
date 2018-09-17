@@ -49,6 +49,8 @@ set scrolloff=5
 let g:python3_host_prog='/opt/local/bin/python3.5'
 let g:deoplete#enable_at_startup = 1
 
+let g:deoplete#sources#jedi#server_timeout=30
+
 " Search options
 set incsearch
 set ignorecase
@@ -74,10 +76,22 @@ nmap s <Plug>(easymotion-s2)
 nmap <Leader>w <Plug>(easymotion-bd-wl)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
+map <Leader><Leader>w <Plug>(easymotion-w)
+
+set hidden
 
 " Syntax Highlighting
 syntax on
 colorscheme onedark
+
+"Trimwhite space easily
+fun! TrimWhiteSpace()
+    let l:save = winsaveview()
+    %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+
+command! TrimWhiteSpace call TrimWhiteSpace()
 
 nnoremap <silent> n n:call HLNext(0.2)<CR>
 nnoremap <silent> N N:call HLNext(0.2)<CR>

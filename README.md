@@ -45,6 +45,9 @@ Use the named registers to avoid your cut text from being overriden by a rando d
 - Surround until end of line: `ys$)`
 - In general type of action, s, motion and delimiter
 
+### Indent Code
+In visual mode select code then `<` or `>`. You can repeat with `.`
+
 ### Other
 - Open a terminal with: `:terminal`
 - Insert in block mode: C-v to take you to block v-mode. Select the first column, shift-I to go to insert mode. Add space then ESC
