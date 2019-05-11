@@ -82,7 +82,7 @@ set hidden
 
 " Syntax Highlighting
 syntax on
-colorscheme onedark
+silent! colorscheme onedark
 
 "Trimwhite space easily
 fun! TrimWhiteSpace()
