@@ -24,6 +24,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'easymotion/vim-easymotion'
 Plug 'itchyny/lightline.vim'
 Plug 'joshdick/onedark.vim'
+Plug 'arcticicestudio/nord-vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'mhinz/vim-startify'
 Plug 'vim-latex/vim-latex'
@@ -32,7 +33,6 @@ Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/vim-peekaboo'
 Plug 'qpkorr/vim-bufkill'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
@@ -82,7 +82,7 @@ set hidden
 
 " Syntax Highlighting
 syntax on
-silent! colorscheme onedark
+silent! colorscheme nord
 
 "Trimwhite space easily
 fun! TrimWhiteSpace()
