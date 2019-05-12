@@ -45,7 +45,7 @@ call plug#end()
 set scrolloff=5
 " for deoplete you also have to install via pip3 neovim and yapf
 " and point python3_host_prog to your python3
-let g:python3_host_prog='/opt/local/bin/python3.5'
+let g:python3_host_prog='/usr/bin/python3.5'
 let g:deoplete#enable_at_startup = 1
 
 let g:deoplete#sources#jedi#server_timeout=30
