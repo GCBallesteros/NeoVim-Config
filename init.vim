@@ -24,7 +24,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'easymotion/vim-easymotion'
 Plug 'itchyny/lightline.vim'
 Plug 'joshdick/onedark.vim'
-Plug 'arcticicestudio/nord-vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'mhinz/vim-startify'
 Plug 'vim-latex/vim-latex'
@@ -82,7 +81,7 @@ set hidden
 
 " Syntax Highlighting
 syntax on
-silent! colorscheme nord
+silent! colorscheme onedark
 
 "Trimwhite space easily
 fun! TrimWhiteSpace()
