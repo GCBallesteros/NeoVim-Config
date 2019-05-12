@@ -36,6 +36,7 @@ Plug 'qpkorr/vim-bufkill'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 Plug 'reedes/vim-pencil'
+Plug 'w0rp/ale'
 Plug 'jeetsukumaran/vim-filebeagle'
 
 " List ends here. Plugins become visible to Vim after this call.
@@ -120,6 +121,14 @@ let g:startify_relative_path = 1
 
 " Escape terminal key with ESC
 :tnoremap <Esc> <C-\><C-n>
+
+" Ale
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_linters = {'python': ['flake8']}
 
 " How to disable wrap per file
 " Edit  $VIMRUNTIME/ftplugin/filetypename.vim
