@@ -115,7 +115,7 @@ map <silent> -          <Plug>FileBeagleOpenCurrentBufferDir
 
 
 " Startify options
-let g:startify_bookmarks = ['~/.config/nvim/init.vim', '~/Dropbox/Thesis']
+let g:startify_bookmarks = ['~/.config/nvim/init.vim',]
 let g:startify_change_to_dir = 1
 let g:startify_relative_path = 1
 
@@ -129,6 +129,10 @@ let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_linters = {'python': ['flake8']}
+let g:ale_fixers = {
+    \'*': ['remove_trailing_lines', 'trim_whitespace'],
+    \'python': ['black'],
+    \ }
 
 " How to disable wrap per file
 " Edit  $VIMRUNTIME/ftplugin/filetypename.vim
