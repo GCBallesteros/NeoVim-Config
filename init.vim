@@ -38,6 +38,7 @@ Plug 'zchee/deoplete-jedi'
 Plug 'reedes/vim-pencil'
 Plug 'w0rp/ale'
 Plug 'jeetsukumaran/vim-filebeagle'
+Plug 'GCBallesteros/iron.nvim'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -133,6 +134,26 @@ let g:ale_fixers = {
     \'*': ['remove_trailing_lines', 'trim_whitespace'],
     \'python': ['black'],
     \ }
+
+" Iron.nvim config
+lua << EOF
+local iron = require("iron")
+
+iron.core.add_repl_definitions{
+  python = {
+    my_ipy = {
+      command = "ipython3",
+      type = "bracketed"
+    }
+  }
+}
+
+iron.core.set_config{
+  preferred = {
+    python = "my_ipy"
+  }
+}
+EOF
 
 " How to disable wrap per file
 " Edit  $VIMRUNTIME/ftplugin/filetypename.vim
