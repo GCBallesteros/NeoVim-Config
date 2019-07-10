@@ -72,12 +72,12 @@ nmap <Leader>t :Files<CR>
 
 " EasyMotion configuration
 let g:EasyMotion_do_mapping = 0 "Disable default mappings
+let g:EasyMotion_smartcase = 1
 hi link EasyMotionShade  Comment
 nmap s <Plug>(easymotion-s2)
-nmap <Leader>w <Plug>(easymotion-bd-wl)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
-map <Leader><Leader>w <Plug>(easymotion-w)
+map <Leader>f <Plug>(easymotion-bd-fl)
 
 set hidden
 
