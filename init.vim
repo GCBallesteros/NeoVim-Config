@@ -33,9 +33,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'qpkorr/vim-bufkill'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-jedi'
-Plug 'reedes/vim-pencil'
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'zchee/deoplete-jedi'
+"Plug 'reedes/vim-pencil'
 Plug 'w0rp/ale'
 Plug 'jeetsukumaran/vim-filebeagle'
 
